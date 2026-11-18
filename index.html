@@ -380,8 +380,8 @@ const main = document.getElementById('scenes');
 main.innerHTML = SCENES.map((s,i)=>`
 <section class="scene" tabindex="0" data-i="${i}" aria-label="${s.title}">
   <div class="stage">
-    <div class="pane now"><img ${i>0?"loading="lazy" ":""}src="${s.nowImg||("images/"+(s.img||s.id)+"-now.jpg")}" alt="" style="--z:1.12;--o:${s.pNow||'50% 50%'}"></div>
-    <div class="pane old"><img ${i>0?"loading="lazy" ":""}src="images/${s.img||s.id}-old.jpg" alt="" style="--z:1.42;--o:${s.pOld||'50% 50%'}"></div>
+    <div class="pane now"><img ${i>0?'loading="lazy" ':''}src="${s.nowImg||("images/"+(s.img||s.id)+"-now.jpg")}" alt="" style="--z:1.12;--o:${s.pNow||'50% 50%'}"></div>
+    <div class="pane old"><img ${i>0?'loading="lazy" ':''}src="images/${s.img||s.id}-old.jpg" alt="" style="--z:1.42;--o:${s.pOld||'50% 50%'}"></div>
     <div class="divider"></div>
     <div class="handle"><span></span><span></span></div>
     <span class="tag l">${s.date}</span>
